@@ -2169,7 +2169,7 @@ static void led_refresh(int n)
 
 	ret = xwii_iface_get_led(iface, XWII_LED(n+1), &led_state[n]);
 	if (ret)
-		print_error("Error: Cannot read LED state");
+		print_error("Error: Cannot read LED #%i state", n+1);
 	else
 		led_show(n, led_state[n]);
 }
